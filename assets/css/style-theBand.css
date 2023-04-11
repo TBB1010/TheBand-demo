@@ -1,0 +1,586 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+html {
+    /* Hành vi khi cuộn */
+    scroll-behavior: smooth;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+1.  Từ ngoài vào trong
+2.  Từ trên xuống dưới
+3.  Tổng quan đến chi tiết
+*/
+
+/* 
+- vị trí(header,body,footer,....)
+- Kích thước (width,height)
+- màu sắc
+- kiểu dáng (Kiểu chữ, hình tròn,vuông,....)
+*/
+
+/* Hiệu ứng -  animation */
+@keyframes modalAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Commom-Chung */
+.text-algin {
+    text-align: center;
+}
+
+.icons-padding {
+    padding-right: 10px;
+}
+
+#main {
+    /* display: flex;
+    flex-direction: column; */
+}
+
+/* Tiêu đề: menu */
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#menu-nav {
+    display: flex;
+    list-style: none;
+    position: relative;
+}
+
+/* Con cấp 1 */
+#menu-nav>li>a {
+    text-transform: uppercase;
+    color: #fff;
+    padding: 0 24px 0 24px;
+    line-height: 46px;
+    font-weight: 900;
+    font-size: 15px;
+}
+
+#menu-nav li a {
+    text-decoration: none;
+}
+
+/* #menu-nav > li{
+    display: block;
+} */
+
+#menu-nav>li:hover>a {
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+
+#menu-nav .subnav {
+    list-style: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px #000;
+    display: none;
+}
+
+#menu-nav li:hover .subnav {
+    display: block;
+}
+
+/* Con cấp 2 */
+#menu-nav .subnav li {
+    padding: 5px 40px 5px 0px;
+}
+
+.subnav li a {
+    color: #000;
+    display: flex;
+    align-items: center;
+}
+
+.subnav li:hover {
+    color: #000;
+    background-color: #ccc;
+    display: block;
+}
+
+#menu-nav .subnav .fa-regular {
+    padding: 10px;
+}
+
+/* Search-button */
+#header .search-btn {
+    /* display: flex;
+    align-items: center; */
+    padding: 14px 20px;
+}
+
+#header .search-btn:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+#header .mobile-search-btn {
+    padding: 14px 20px;
+    /* margin-block-end: auto; */
+}
+
+/* #header .mobile-search-btn .menu-icon {
+    display: inline-block;
+} */
+
+#header .mobile-search-btn i:hover {
+    /* background-color: #ccc; */
+    color: #ffffff;
+}
+
+#header .fa-solid {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+#header .fa-solid:hover {
+    color: #000;
+}
+
+/* Slider */
+#slider {
+    margin-top: 46px;
+    padding-top: 50%;
+    background: url(/F8-TheBand/Img/pexels-vlad-alexandru-popa-1402787.jpg) top center / cover no-repeat;
+    position: relative;
+}
+
+#slider .text-content {
+    position: absolute;
+    color: #fff;
+    top: 100px;
+    /* left: 50%;
+    transform: translateX(-50%); */
+    /* width: 100%; */
+    left: 0;
+    right: 0;
+    text-align: center;
+    box-shadow: #000;
+}
+
+#slider .text-content .text-header {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 3px;
+    padding-bottom: 15px;
+    text-transform: uppercase;
+}
+
+#slider .text-content .text-slider {
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+/* Content */
+#content {
+
+}
+
+/* About content */
+#content .content-section {
+    padding: 64px 16px 100px 16px;
+    /* width: 800px; */
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#content .content-section .section-heading {
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-weight: 500;
+    text-align: center;
+    font-size: 30px;
+}
+
+#content .content-section .section-sub-heading {
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin: 25px 25px;
+    opacity: 0.6;
+}
+
+#content .content-section .about-text {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 15px;
+}
+
+/* team-section */
+#content .section-team {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#content .section-team .about-team {
+    padding: 0 10px 0 10px;
+}
+
+.section-team .about-team .img-team{
+    width: 200px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.section-team .about-team .img-team:hover {
+    box-shadow: 0 0 10px #000;
+}
+
+.section-team .about-team .name-team {
+    padding: 10px;
+}
+
+/* Tour content */
+.tour-section {
+    background-color: #000000;
+}
+
+/* Text white */
+.text-white {
+    color: #ffffff !important;
+}
+
+/* .tour-section .content-section .section-heading, 
+.tour-section .content-section .section-sub-heading {
+    color: #ffffff;
+} */
+
+.content-section .tickets-list {
+    background-color: #fff;
+    font-size: 15px;
+    margin-top: 50px;
+}
+
+.content-section .tickets-list li{
+    padding: 11px 16px;
+    color: #757575;
+    list-style: none;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-section .tickets-list .sold-out{
+    background-color: #f44336;
+    color: #fff;
+    padding: 5px 3px;
+    margin-left: 15px;
+}
+
+.content-section .tickets-list .sold-out:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+.content-section .tickets-list .quantity{
+    float: right;
+    background-color: #000;
+    color: #fff;
+    height: 24px;
+    width: 24px;
+    border-radius: 12px;
+    margin-top: -3px;
+    line-height: 24px;
+    text-align: center
+}
+
+.places-list {
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.places-list .nav-places {
+    width: calc(95%/3);
+}
+
+/* .places-list .nav-places:hover {
+    box-shadow: 0 0 10px #fff;
+} */
+
+.places-list .nav-places .sub-img {
+    width: 100%;
+    display: block;
+}
+
+.places-list .nav-places .sub-img:hover  {
+    opacity: 0.6;
+}
+
+.places-list .nav-places .sub-text {
+    background-color: #fff;
+    padding: 0px 16px 16px 16px;
+    display: inline-block;
+}
+
+.text-item1,.text-item2,.text-item3{
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.text-item2 {
+    opacity: 0.6;
+}
+
+.text-item3{
+    line-height: 1.4;
+}
+
+.buy-btn{
+    background-color: #000;
+    color: #Fff;
+    padding: 14px 16px 14px 16px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    border: none;
+}
+
+.buy-btn:hover {
+    background-color: #ccc;
+    color: #000;
+}
+
+
+/* Modal-Phương thức */
+.modal {
+    position: fixed;
+    top:0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,0.4);
+    align-items: center;
+    justify-content: center;
+    display: none;
+} 
+
+.modal.open {
+    display: flex;
+}
+
+.modal .modal-content {
+    background-color: #ffffff;
+    width: 900px;
+    min-height: 300px;
+    position: relative;
+    animation: modalAnimation .3s ease;
+}
+
+.modal-content .modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: #ffffff;
+    padding: 12px;
+    opacity: 0.7;
+    border: none;
+    cursor: pointer;
+}
+
+.modal-content .modal-close:hover {
+    opacity: 1;
+}
+
+.modal-content .modal-header {
+    background-color: #009688;
+    height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    text-transform: capitalize;
+    font-size: 30px;
+}
+
+.modal-content .modal-header .text-header {
+    margin-left: 16px;
+}
+
+.modal-content .modal-body {
+    padding: 16px;
+
+}
+
+.modal-content .modal-body .modal-label{
+    display: block;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.modal-content .modal-body .modal-input {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+}
+
+.modal-content .modal-body .modal-button {
+    width: 100%;
+    text-transform: uppercase;
+    background-color: #009688;
+    border: none;
+    color: #ffffff;
+    padding: 12px;
+    cursor: pointer;
+}
+
+.modal-content .modal-body .modal-button:hover {
+    opacity: 0.8;
+}
+
+.modal-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 16px;
+    padding-left: 16px;
+}
+
+.modal-footer .about-text{
+    font-size: 15px;
+}
+
+.modal-footer .text-footer{
+    color: #2196F3;
+}
+
+.modal-footer .text-close {
+    background-color: #f44336;
+    padding: 10px 8px;
+    margin-bottom: 15px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.modal-footer .text-close:hover {
+    background-color: #ccc;
+    color: #000000;
+}
+
+.contact-content {
+    margin-top: 48px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-info{
+    font-size: 18px;
+}
+
+.contact-info a {
+    color: #1409ec;
+    opacity: 0.8;
+}
+
+.contact-info a:hover {
+    opacity: 1;
+}
+
+.contact-info .info-phone,
+.contact-info .info-email,
+.contact-info .info-addr {
+    padding-bottom: 8px;
+}
+
+.form-login .name,
+.form-login .email {
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.form-login .name {
+    margin-right: 10px;
+}
+
+.contact-form .message {
+    width: 100%;
+    font-size: 15px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-top: 10px;
+    /* outline: none; */
+}
+
+.contact-form .send {
+    margin-top: 10px;
+    font-size: 15px;
+    padding: 12px 17px;
+    border: 1px solid #ddd;
+    background-color: #000;
+    color: #ffffff;
+    float: right;
+    cursor: pointer;
+    /* TRên các ứng dụng khác ex: chomre,.... */
+    /* appearance: none; */
+    /* DÙng trên safari */
+    -webkit-appearance: none;
+}
+
+.contact-form .send:hover {
+    background-color: #ccc;
+    color: #000000;
+}
+
+.map-section img {
+    width: 100% ;
+}
+
+#footer {
+    margin: 64px 0 64px 0;
+    text-align: center;
+}
+
+#footer .socials-list a{
+    font-size: 30px;
+    color:  rgba(0,0,0,0.6);
+}
+
+#footer .socials-list a:hover {
+    color: #000000;
+}
+
+#footer .socials-list {
+    margin: 0 auto;
+    border-bottom: 3px solid #757575;
+    border-radius: 7px;
+    width: 400px;
+    padding-bottom: 20px;
+}
+
+#footer .copyright {
+    font-size: 18px;
+    padding: 10px;
+    color: #757575;
+}
+
+#footer .copyright a {
+    font-size: 18px;
+    color: #757575;
+}
+

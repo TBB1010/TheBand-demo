@@ -1,0 +1,150 @@
+   /* man hinh desktop */
+   @media (min-width: 64em) {
+    #header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header .mobile-search-btn {
+        display: none;
+    }
+}
+
+/* Man hinh tablet: ipad */
+@media (min-width: 46.25em) and (max-width: 63.9375em){
+    #header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    #header .mobile-search-btn {
+        display: none;
+    }
+}
+
+/* Tablet & Mobile */
+@media (max-width: 63.9375em) {
+    .s-full-width {
+        width: 100% !important;
+    }
+
+    .modal .modal-content {
+        margin: 0 10px;
+    }
+
+    .contact-form .form-login .email{
+        margin-top: 10px;
+    }
+
+    .contact-form .form-login .name,
+    .contact-form .form-login .email,
+    .contact-form .message,
+    .contact-form .send {
+        padding: 15px 10px;
+    }
+
+    #footer .copyright a {
+        padding: 10px 0;
+    }
+}
+
+/* Man hinh mobile */
+@media (max-width: 46.1875em) {
+    /* #main {
+        display: flex;
+        flex-direction: column;
+    } */
+    /* Commom */
+    .s-full-width,
+    .s-col-full  {
+        width: 100% !important;
+    }
+ 
+    #header {
+        overflow: hidden;
+    }
+
+    #header .search-btn {
+        display: none;
+    }
+
+    #header .mobile-search-btn {
+        position: absolute;
+        top: 0;
+        right: 0;
+    }
+
+    #menu-nav {
+        display: block;
+    }
+
+    #menu-nav > li:first-child {
+        display: inline-block;
+    }    
+
+    #menu-nav .subnav {
+        position: initial;
+        background-color: #333;
+    }
+
+    #menu-nav .subnav li {
+        padding: 6px 40px;
+    }
+
+    #menu-nav .subnav a{
+        color: #ffffff;
+    }
+
+    #menu-nav .subnav li:hover a{
+        color: #000000;
+    }
+
+    #slider .text-content .text-header {
+        font-size: 20px;
+    }
+
+    #content .content-section .section-team {
+        display: block;
+    }
+
+    .content-section .section-team .member-item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 17px;
+    }
+
+    .section-team .member-item .name-team {
+        padding: 15px 0;
+    }
+
+    .section-team .member-item .img-team {
+        width: 80%;
+        height: 100%;
+    }
+
+    #content .tour-section .places-list {
+        display: inline-block;
+    }
+
+    .tour-section .places-list .nav-places {
+        margin-bottom: 16px;
+    }
+
+    #content .contact-content {
+        display: block;
+    }
+
+    #content .contact-content .contact-info {
+        margin-bottom: 20px;
+    }
+
+    #footer .socials-list {
+        max-width: 250px;
+    }
+
+    #footer .socials-list a,
+    #footer .copyright {
+        font-size: 16px;
+    }
+}
