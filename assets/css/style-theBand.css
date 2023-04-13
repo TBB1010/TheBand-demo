@@ -165,11 +165,7 @@ html {
 #slider {
     margin-top: 46px;
     padding-top: 50%;
-<<<<<<< HEAD
     background: url(/Img/pexels-vlad-alexandru-popa-1402787.jpg) top center / cover no-repeat;
-=======
-    background: url(./Img/pexels-vlad-alexandru-popa-1402787.jpg) top center / cover no-repeat;
->>>>>>> 06378e4bf43feb4191ec49d38fef8342ef104fb8
     position: relative;
 }
 
